@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>Corousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/eb3c934bad.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/351fc0f417.js"></script>
+   
+   
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    
+    
+    <style>
+      html,body{
+        max-width:100%;
+        overflow-x:hidden;
+      }
+    body::-webkit-scrollbar
+    {
+            display: none;
+    }
+    .carousel 
+  {
+    position: relative;
+    height: 250px;     
+   overflow: hidden;
+  }
+.carousel-inner 
+  {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  }
+.carousel-item 
+  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  }
+.carousel-item.active 
+  {
+  opacity: 1;
+  }
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(30%);
+  opacity: 0.8;
+}
+.carousel-caption {
+  position: absolute; 
+   top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption p {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1;
+			text-shadow: 2px 2px 2px #000;
+           
+}
+/* .carousel-caption p {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+} */
+.carousel-caption-ex {
+  position: absolute; 
+   top: 10%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption-ex img {
+    filter: brightness(70%);
+  height: 200px;
+  width: 200px;
+}
+
+
+
+@media screen and (max-width: 815px) {
+    .carousel {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+    .carousel-caption {
+  position: absolute; 
+   top: 40%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption h3 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.carousel-caption p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.carousel-caption-ex {
+  position: absolute; 
+   top: 10%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption-ex img {
+  height: 200px;
+  width: 200px;
+}
+        
+
+
+}
+
+@media screen and (max-width: 1300px)
+{
+
+  .carousel 
+  {
+    position: relative;
+    height: 250px;     
+   overflow: hidden;
+  }
+.carousel-inner 
+  {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  }
+.carousel-item 
+  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  }
+.carousel-item.active 
+  {
+  opacity: 1;
+  }
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+.carousel-caption {
+  position: absolute; 
+   top: 40%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption p {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1;
+			text-shadow: 2px 2px 2px #000;
+           
+}
+/* .carousel-caption p {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+} */
+.carousel-caption-ex {
+  position: absolute; 
+   top: 10%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption-ex img {
+  height: 200px;
+  width: 200px;
+}
+
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 1200px)
+{
+
+  .carousel 
+  {
+    position: relative;
+    height: 250px;     
+   overflow: hidden;
+  }
+.carousel-inner 
+  {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  }
+.carousel-item 
+  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  }
+.carousel-item.active 
+  {
+  opacity: 1;
+  }
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+.carousel-caption {
+  position: absolute; 
+   top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption p {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1;
+			text-shadow: 2px 2px 2px #000;
+           
+}
+/* .carousel-caption p {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+} */
+.carousel-caption-ex {
+  position: absolute; 
+   top: 10%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption-ex img {
+  height: 200px;
+  width: 200px;
+}
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 950px)
+{
+
+  .carousel 
+  {
+    position: relative;
+    height: 250px;     
+   overflow: hidden;
+  }
+.carousel-inner 
+  {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  }
+.carousel-item 
+  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  }
+.carousel-item.active 
+  {
+  opacity: 1;
+  }
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+.carousel-caption {
+  position: absolute; 
+   top: 40%;
+  left: 30%; 
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption p {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1;
+			text-shadow: 2px 2px 2px #000;
+           
+}
+/* .carousel-caption p {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+} */
+.carousel-caption-ex {
+  position: absolute; 
+   top: 10%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption-ex img {
+  height: 150px;
+  width: 150px;
+}
+
+
+
+
+
+}
+      
+
+        
+
+        @media screen and (max-width: 950px)
+{
+
+  .carousel 
+  {
+    position: relative;
+    height: 250px;     
+   overflow: hidden;
+  }
+.carousel-inner 
+  {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  }
+.carousel-item 
+  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  }
+.carousel-item.active 
+  {
+  opacity: 1;
+  }
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+.carousel-caption {
+  position: absolute; 
+   top: 40%;
+  left: 30%; 
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption p {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1;
+			text-shadow: 2px 2px 2px #000;
+           
+}
+/* .carousel-caption p {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+} */
+.carousel-caption-ex {
+  position: absolute; 
+   top: 10%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption-ex img {
+  height: 150px;
+  width: 150px;
+}
+
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 750px)
+{
+
+  .carousel 
+  {
+    position: relative;
+    height: 300px;     
+   overflow: hidden;
+   text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  display: flex;
+  }
+.carousel-inner 
+  {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  display: flex;
+  }
+.carousel-item 
+  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  }
+.carousel-item.active 
+  {
+  opacity: 1;
+  }
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+.carousel-caption {
+  position: absolute; 
+   top: 30%;
+    left:50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  display: flex;
+}
+.carousel-caption p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1;
+			text-shadow: 2px 2px 2px #000;
+      text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  display: flex;
+           
+}
+/* .carousel-caption p {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+} */
+.carousel-caption-ex {
+  
+   top: 45%;
+  left: 35%; 
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption-ex img {
+  height: 150px;
+  width: 150px;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+      
+/* 
+        @media screen and (max-width: 500px) {
+    .carousel {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+    .carousel-caption {
+  position: absolute; 
+   top: 0%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption h3 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.carousel-caption p {
+  top:0%;
+  left: 30%;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.carousel-caption-ex {
+  position: absolute; 
+   top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption-ex img {
+  height: 100px;
+  width: 100px;
+}
+        } */
+
+
+
+       
+
+/* SECOND */
+     
+.x{
+    height: 100vh;
+    border: 2px solid black;
+    width: 150px;
+    height:150px;
+    margin: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 5%; 
+  }
+  .y{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex; 
+   
+    white-space: nowrap;
+  }
+  img
+{
+    width: 280px;
+    height: 230px;
+}
+.president {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: 2px solid black;
+    width: 200px;
+    height:200px;
+    margin: auto;
+        border-radius: 50%;
+        margin-top: 20px;
+  }
+  button {
+			
+			padding: 1rem 2rem;
+			background-color:whitesmoke;
+			color: #000;
+			border: solid black;
+			
+			box-shadow: 2px 2px 2px #000;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+			outline: none;
+			margin-top: 0;
+            
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+    width:150px;
+    height:80px;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 5%;
+		}
+		button:hover {
+			background-color: #000;
+			color: #fff;
+			box-shadow: 4px 4px 4px #000;
+			transform: scale(1.1);
+		}
+
+
+        /* Third */
+
+        ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .carousel1 {
+    position: relative;
+    overflow: hidden;
+   
+    box-shadow: 5px 10px 30px rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+  }
+
+  .carousel__slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 120vw;
+    /* border: 2px solid #333; */
+    height: 250px;
+  }
+  
+  .carousel__list {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .carousel__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 10%;
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+  }
+  
+  .carousel__item:hover {
+    transform: scale(1.1);
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  @media only screen and (max-width: 768px) {
+    .carousel__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    padding: 10%;
+  }
+}
+  img
+{
+    width: 280px;
+    height: 230px;
+}
+
+/* events */
+
+.container{
+        height:250px;
+        margin:auto;
+        position: relative;
+        width:300px;
+        display: grid;
+        place-items: center;
+        
+      }
+      .slide-container{
+        display:flex;
+        width:100%;
+        animation:scroll 20s linear infinite;
+
+      }
+      @keyframes scroll{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-250px* 9));
+        }
+      }
+      .slide-image{
+        height: 250px;
+        width:250px;
+        display: flex;
+        align-items: center;
+        padding-right:40px;
+        perspective: 100px;
+      }
+      .container img{
+        width:300px;
+        height: 250px;
+        transition: transform 1s;
+        padding-right:80px;
+       
+        
+
+      }
+      img:hover{
+        transform:translateZ(20px);
+      }
+      .slide-container:hover{
+        animation-play-state: paused;
+      }
+
+
+
+      /* Principal */
+
+      .on figure{
+      margin-top: 60px;
+      margin-left: 20px;
+    }
+    .row{
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 20px;
+        }
+        .tu{
+          padding-top: 0px;
+        }
+       .row img{
+          width: 450px;
+          height: 240px;
+        }
+    .tu img{
+      width: 220px;
+      height: 140px;
+    }
+    .col-sm{
+      margin: 0px;
+      padding: 10px;
+    }
+    @media screen and (max-width:1410px)
+    {
+      .col-sm{
+        margin: 0;
+        padding: 0;
+      }
+    }
+    @media screen and (max-width:990px)
+    {
+      .on figure{
+        margin-top: 0px;
+        align-items: center;
+      }
+    }
+    /* @media screen and (max-width:980px)
+    {
+      .on figure{
+        margin-top: 140px;
+      }
+      /* img{
+        width:250px;
+        height: 150px;
+      }
+      .tu img{
+          width: 170px;
+          height: 120px;
+        } */
+    @media screen and (max-width:860px)
+    {
+      .on{
+        width:100%;
+      }
+      .off{
+        width:100%;
+      }
+    }
+    @media screen and (max-width:470px)
+    {
+      .on img{
+        width:330px;
+      }
+    }
+    @media screen and (max-width:380px)
+    {
+      .on img{
+        width: 260px;
+      }
+      .on figure{
+        margin-left: 50px;
+        align-items: center;
+      }
+      .col-sm{
+        width: 100%;
+      }
+        .tu img{
+          width: 50%;
+          height: 120px;
+        }
+    }
+    @media screen and (max-width:310px)
+    {
+      .on figure{
+        align-items: start;
+        justify-content: left;
+      }
+      .on img{
+        width:200px;
+        height:140px;
+        margin-left: 0px;
+      }
+    }
+    @media screen and (max-width:245px)
+    {
+      .on figure{
+        align-items: start;
+        justify-content: left;
+      }
+      .on img{
+        width:120px;
+        margin-left: 0px;
+      }
+    }
+    @media screen and (max-width:175px)
+    {
+      .on figure{
+        align-items: start;
+        justify-content: left;
+      }
+      .on img{
+        width:120px;
+        margin-left: 0px;
+      }
+    }
+    .row img:hover{
+    transform:scale(1.1);
+}
+.row figcaption{
+  font-weight: bolder;
+}
+@media screen and (max-width: 400px) {
+    .carousel {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+    .carousel-caption {
+  position: absolute; 
+   top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption h3 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.carousel-caption p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.carousel-caption-ex {
+  position: absolute; 
+   top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.carousel-caption-ex img {
+  height: 150px;
+  width: 150px;
+}
+        }
+        /* @media screen and (max-width: 450px) {
+    .carousel {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+    .carousel-caption {
+  position: absolute; 
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  top: 78%;
+  left: 30%;
+  
+}
+.carousel-caption h3 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.carousel-caption p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.carousel-caption-ex {
+  position: absolute; 
+   top: 8%;
+  left:20%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  place-content: center;
+}
+.carousel-caption-ex img {
+  height: 200px;
+  width: 200px;
+  
+}
+        }
+        @media screen and (max-width: 300px) {
+    .carousel {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+    .carousel-caption {
+  position: absolute; 
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  top: 78%;
+  left: 30%;
+  
+}
+.carousel-caption h3 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.carousel-caption p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.carousel-caption-ex {
+  position: absolute; 
+   top: 8%;
+  left:10%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  place-content: center;
+}
+.carousel-caption-ex img {
+  height: 200px;
+  width: 200px;
+  
+}
+        } */
+
+        .icons i:hover{
+  transform:scale(1.1);
+  background-color: #000;
+			color: #fff;
+			box-shadow: 4px 4px 4px #000;
+}
+
+
+@media screen and (max-width:500px)
+    {
+      .x{
+    height: 100vh;
+    border: 2px solid black;
+    width: 100px;
+    height:100px;
+    margin: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 0%; 
+  }
+  .y{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex; 
+   
+    white-space: nowrap;
+  }
+  .x img
+{
+    width: 180px;
+    height: 130px;
+}
+.president {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: 2px solid black;
+    width: 150px;
+    height:150px;
+    margin: auto;
+        border-radius: 50%;
+        margin-top: 20px;
+  }
+    }
+    .im img{
+    width: 45%;
+    height: 30%;
+  }
+  figcaption{
+    font-weight: bolder;
+    font-size: 2.5rem;
+  }
+.row img:hover{
+        transform:translateZ(0px);
+      }
+.icons{
+  margin-top: 70px;
+ position: relative;
+}
+@media screen and (max-width:1200px)
+{
+  .row img{
+    width: 55%;
+    height: 40%;
+  }
+  .icons{
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width:1100px)
+{
+  .row img{
+    width: 60%;
+    height: 40%;
+  }
+  .icons{
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width:980px){
+  .icons{
+    margin-top: 55px;
+  }
+}
+@media screen and (max-width:830px){
+  .row img{
+    width: 65%;
+    height: 30%;
+  }
+  figcaption{
+    font-weight: bolder;
+    font-size: 2rem;
+  }
+  .icons{
+    margin-top: 46px;
+  }
+}
+@media screen and (max-width:770px)
+{
+  .row img{
+    width: 55%;
+    height: 30%;
+  }
+  .icons{
+    margin-top: 20px;
+  }
+  figcaption{
+    font-weight: bolder;
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width:400px)
+{
+  
+  figcaption{
+    font-weight: bolder;
+    font-size: 1.6rem;
+  }
+}
+     </style>
+</head>
+<body>
+    <div class="carousel slide" >
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-color: black;">
+            <img src="pydahh.jpg" alt="Slide 1">
+            <div class="carousel-caption">
+              <p>Pydah&nbsp;Educational Academy</p>
+            </div>
+            <div class="carousel-caption-ex">
+              <img src="s9.png" alt="Logo">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+          <div class="im" align="center">
+            <figure style="margin: 20px;">
+              <img src="pydahprinc.jpg" alt="stj" class="responsive">
+              <figcaption>Principal</figcaption>
+            </figure>
+          </div>
+        </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="icons" align="center" style="border-style: solid;border-radius:5%; border-color: black; padding: 30px;">
+              <h1 align="center">Join now</h1>
+              <i class="fa-brands fa-whatsapp fa-border fa-3x" style="background-color: #43d854;color:white"></i>&nbsp;&nbsp;&nbsp;
+            <i class="fa-brands fa-discord fa-border fa-3x" style="background-color: #1769ff;color:white"></i>&nbsp;&nbsp;&nbsp;
+            <i class="fa-brands fa-google fa-border fa-3x" style="background-color: #dc4e41;color:white"></i>
+            </div>
+        </div>
+      </div>
+
+     
+      <h1 style="text-align: center; margin-top: 40px;">President</h1>
+      <img src="president.jpg" class="president">
+      <br>
+    <div class="y" >
+       <figure >
+      <img src="president.jpg" class="x" >
+      <figcaption style="text-align: center; font-size: 30px; font-weight: bold;">Lead1</figcaption>
+    </figure>
+    <figure >
+    <img src="president.jpg" class="x"  >
+    <figcaption style="text-align: center;  font-size: 30px; font-weight: bold;">Lead1</figcaption>
+  </figure>
+  <figure >
+  <img src="president.jpg" class="x" >
+  <figcaption style="text-align: center;  font-size: 30px; font-weight: bold;">Lead1</figcaption>
+</figure>
+<figure >
+  <img src="president.jpg" class="x" >
+  <figcaption style="text-align: center;  font-size: 30px; font-weight: bold;">Lead1</figcaption>
+</figure>
+<figure >
+  <img src="president.jpg"  class="x">
+  <figcaption style="text-align: center;  font-size: 30px; font-weight: bold;">Lead1</figcaption>
+</figure>
+    </div>
+
+
+
+
+      <!-- <h1>Latest Events</h1>
+      <marquee scrollamount="15" onmouseover="this.stop()" onmouseout="this.start()">
+<section class="carousel1">
+        <div class="carousel__slider">
+          <ul class="carousel__list">
+            <li class="carousel__item">
+             <img src="image.jfif">
+            </li>
+            <li class="carousel__item">
+              <img src="event1.jpeg">
+            </li>
+            <li class="carousel__item">
+              <img src="event2.jpeg">
+            </li>
+            <li class="carousel__item">
+              <img src="event3.jpeg">
+            </li>
+            <li class="carousel__item">
+              <img src="event4.jpeg">
+            </li>
+            <li class="carousel__item">
+              <img src="img.jfif">
+            </li>
+            <li class="carousel__item">
+              <img src="image.jfif">
+             </li>
+             <li class="carousel__item">
+               <img src="event1.jpeg">
+             </li>
+             <li class="carousel__item">
+               <img src="event2.jpeg">
+             </li>
+             <li class="carousel__item">
+               <img src="event3.jpeg">
+             </li>
+             <li class="carousel__item">
+               <img src="event4.jpeg">
+             </li>
+             <li class="carousel__item">
+               <img src="img.jfif">
+             </li>
+             <li class="carousel__item">
+              <img src="image.jfif">
+             </li>
+             <li class="carousel__item">
+               <img src="event1.jpeg">
+             </li>
+             <li class="carousel__item">
+               <img src="event2.jpeg">
+             </li>
+             <li class="carousel__item">
+               <img src="event3.jpeg">
+             </li>
+             <li class="carousel__item">
+               <img src="event4.jpeg">
+             </li>
+             <li class="carousel__item">
+               <img src="img.jfif">
+             </li>
+          </ul>
+        </div>
+      </section></marquee> -->
+    
+      <!-- <script src="naga.js"></script> -->
+
+
+      <h1>Latest Events</h1>
+    
+    <div class="container">
+        <div class="slide-container">
+            <div class="slide-image">
+          <img src="pyadahe1.jpg" alt="Image 1"></div>
+          <div class="slide-image">
+          <img src="pyadahe1.jpg" alt="Image 2">
+        </div>
+          <div class="slide-image">
+          <img src="pyadahe1.jpg" alt="Image 3">
+        </div>
+          <div class="slide-image">
+          <img src="pyadahe1.jpg" alt="Image 4">
+        </div>
+          <div class="slide-image">
+          <img src="pyadahe1.jpg" alt="Image 5">
+        </div>
+         <div class="slide-image">
+            <img src="pyadahe1.jpg" alt="Image 1"></div>
+            <div class="slide-image">
+            <img src="pyadahe1.jpg" alt="Image 2">
+          </div>
+            <div class="slide-image">
+            <img src="pyadahe1.jpg" alt="Image 3">
+          </div>
+            <div class="slide-image">
+            <img src="pyadahe1.jpg" alt="Image 4">
+          </div>
+            <div class="slide-image">
+            <img src="pyadahe1.jpg" alt="Image 5">
+          </div> 
+        </div>
+      </div>
+                  
+     <a href="indexteam3.html" style="text-decoration: none;"> <button class="join" type="button">Back</button></a>
+
+
+</body>
+</html>
